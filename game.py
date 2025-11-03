@@ -17,10 +17,10 @@ class Asteroids:
 
         def _handle_input(self):
             pass
-        
+
         def _process_game_logic(self):
             pass
 
         def _draw(self):
-            self.screen.fill((0, 0, 255))
+            self.screen.fill((0, 0, 0))
             pygame.display.flip()
