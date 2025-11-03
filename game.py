@@ -17,8 +17,7 @@ class Asteroids:
 
         def _handle_input(self):
             pass
-
-
+        
         def _process_game_logic(self):
             pass
 
