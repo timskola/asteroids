@@ -3,7 +3,7 @@ import pygame
 class Asteroids:
     def __init__(self):
         self.__init__pygame()
-        self.screen = pygame.display.set_mode((1920, 1080))
+        self.screen = pygame.display.set_mode((800, 600))
 
         def main_loop(self):
             while True:
