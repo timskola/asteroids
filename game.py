@@ -5,7 +5,7 @@ class Asteroids:
     # Definierar init funktionen, pygame initieras och gör att skärmen är rätt upplösning.
     def __init__(self):
         self._init_pygame()
-        self.screen = pygame.display.set_mode((800, 600))
+        self.screen = pygame.display.set_mode((1200, 900))
 
     # Definierar main_loop detta är loopen som gör att skärmen uppdateras, spelet faktiskt körs och att den känner av inputs.
     def main_loop(self):
@@ -21,7 +21,10 @@ class Asteroids:
 
     # hanterar input, inte klar
     def _handle_input(self):
-        pass
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT or (
+               event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE):
+                quit()
 
     # processar spel logiken, inte klar
     def _process_game_logic(self):
