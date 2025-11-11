@@ -1,11 +1,14 @@
 import pygame
 
+from utils import load_sprite
+
 # Definerar huvudklassen för spelet, kallad "Asteroids" eftersom det är en kopia av atari asteroids.
 class Asteroids:
     # Definierar init funktionen, pygame initieras och gör att skärmen är rätt upplösning.
     def __init__(self):
         self._init_pygame()
         self.screen = pygame.display.set_mode((1200, 900))
+        self.background = load_sprite("space_background", False)
 
     # Definierar main_loop detta är loopen som gör att skärmen uppdateras, spelet faktiskt körs och att den känner av inputs.
     def main_loop(self):
@@ -32,5 +35,5 @@ class Asteroids:
 
     # Definierar draw funktionen, den ritar allt på skärmen.
     def _draw(self):
-        self.screen.fill((0, 0, 0))
+        self.screen.blit(self.background, (0, 0))
         pygame.display.flip()
