@@ -1,0 +1,26 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+
+# Pygame cache files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Python dependency files
+*.egg-info/
+*.eggs/
+
+# Ignore assets if they are large or generated
+assets/sprites/
+assets/sounds/
