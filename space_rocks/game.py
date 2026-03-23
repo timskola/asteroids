@@ -9,7 +9,7 @@ class Asteroids:
     def __init__(self):
         self._init_pygame()
         self.screen = pygame.display.set_mode((800, 600))
-        self.background = load_sprite("space_background", False)
+        self.background = load_sprite("space_backgrounds", False)
         self.clock = pygame.time.Clock()
         self.spaceship = Spaceship((400, 300))
     # Definierar main_loop detta är loopen som gör att skärmen uppdateras, spelet faktiskt körs och att den känner av inputs.
@@ -37,6 +37,8 @@ class Asteroids:
             self.spaceship.rotate(clockwise=True)
         elif is_key_pressed[pygame.K_LEFT]:
             self.spaceship.rotate(clockwise=False)
+        if is_key_pressed[pygame.K_UP]:
+            self.spaceship.accelerate()
 
     # processar spel logiken, inte klar
     def _process_game_logic(self):
