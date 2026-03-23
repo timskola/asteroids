@@ -22,7 +22,7 @@ class Asteroids:
     # Initialiserar pygame och gör att den dära saken i hörnet av programmet visar rätt namn.        
     def _init_pygame(self):
         pygame.init()
-        pygame.display.set_caption("Asteroids but awesome")
+        pygame.display.set_caption("Asteroids movement test")
 
     # hanterar input, inte klar
     def _handle_input(self):
